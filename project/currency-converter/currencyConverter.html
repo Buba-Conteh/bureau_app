@@ -1,0 +1,158 @@
+
+<!Doctype html>
+<html lang="en">
+​
+<head>
+<title>Currency Converter APP</title>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+​
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+​
+<body>
+<div class="container pt-5">
+<div class="row">
+ <div class="col-md-5 mt-2">
+   <div class="card border-primary rounded-0">
+     <div class="card-header text-center border-primary bg-primary rounded-0 text-white text-bold">
+       CURRENCY RATES
+     </div>
+   <div class="card-body rounded-0">
+   <table class="table table-condensed table-bordered table-hover">
+     <thead class="bg-light">
+       <tr>
+         <th scope="col">CURRENCY</th>
+         <th scope="col">SELLING (D)</th>
+         <th scope="col">BUYING (D)</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr>
+         <td>
+           US DOLLAR (USD)
+         </td>
+         <td>
+           48.20
+         </td>
+         <td>
+           47.20
+         </td>
+       </tr>
+       <tr>
+         <td>
+           POUND STERLING (GBP)
+         </td>
+         <td>
+           64.00
+         </td>
+         <td>
+           61.00
+         </td>
+       </tr>
+       <tr>
+         <td>
+           EURO
+         </td>
+         <td>
+           59.50
+         </td>
+         <td>
+           57.50
+         </td>
+       </tr>
+       <tr>
+         <td>
+           CFA (5000)
+         </td>
+         <td>
+           425.00
+         </td>
+         <td>
+           400.00
+         </td>
+       </tr>
+       <!-- <tr>
+         <td>
+           CANADIAN DOLLAR (CAD)
+         </td>
+         <td>
+           37.00
+         </td>
+         <td>
+           35.00
+         </td>
+       </tr> -->
+       <tr>
+         <td>
+           JAPANESE YEN (JPY) (100)
+         </td>
+         <td>
+           41.39
+         </td>
+         <td>
+           39.39
+         </td>
+       </tr>
+     </tbody>
+   </table>
+ </div>
+ </div> 
+ </div>
+ <div class="col-md-7 mt-2">
+     <div class="card border-primary rounded-0">
+       <div class="card-header text-center border-primary rounded-0 text-primary text-bold bg-transparent">
+         CURRENCY CONVERTER APP
+       </div>
+       <div class="card-body rounded-0">
+           <form class="form-horizontal" method="POST" action="currency-bacend.php">
+               <div class="form-group row">
+                 <label for="currency"  class="col-sm-4 col-form-label">Convert From</label>
+                 <div class="col-sm-8">
+                   <select  name="to_convert_to" id="currency" class="form-control rounded-0">
+                     <option value="">Currency To Convert From</option>
+                     <option value="usd">US DOLLAR (USD)</option>
+                     <option value="pound">POUND STERLING (GBP)</option>
+                     <option value="euro">EURO</option>
+                     <option value="cfa">CFA</option>
+                     <option value="yen">JAPANESE YEN (JPY) (100)</option>
+                   </select>
+                 </div>
+               </div>
+               <div class="form-group row">
+                 <label for="buy_or_sell"  class="col-sm-4 col-form-label">Operation</label>
+                 <div class="col-sm-8">
+                   <select  name="operation" id="buy_or_sell" class="form-control rounded-0">
+                     <option value="option">Select Option</option>
+                     <option value="buy" name="buy">Buy</option>
+                     <option value="sell">Sell</option>
+                   </select>
+                 </div>
+               </div>
+               <div class="form-group row">
+                 <label for="customer" class="col-sm-4 col-form-label">Amount To Convert</label>
+                 <div class="input-group col-sm-8">
+                   <input type="text" class="form-control rounded-0" id="amount" name="amount" placeholder="5000">
+                 </div>
+               </div>
+              
+               <div class="d-flex">
+                   <button type="reset" class="btn btn-outline-secondary mb-2 text-black rounded-0 w-50 mr-2">Reset Fields</button>
+                   <button type="submit" name="submit" class="btn btn-outline-primary mb-2 text-black rounded-0 w-50">Convert Currency</button> 
+               </div>
+               
+             </form>
+       </div>
+     </div>
+   </div>
+ 
+</div>
+​
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+</body>
+​
+</html>
