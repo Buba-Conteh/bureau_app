@@ -237,10 +237,11 @@ $currencies = getCurrencies($pdo);
                       <td>
                    
                         <a href='transactionDetail.php?id=$id'><i class='fas fa-eye text-success'></i></a>
-                        <a href='editTransaction.php?id=$id'><i class='fas fa-edit'></i></a>
+                      
                         ";
                                             if ($_SESSION['admin'] === "admin") {
                                                 echo "
+                             <a href='editTransaction.php?id=$id'><i class='fas fa-edit'></i></a>
                         <a href='comfirmDelete.php?transaction_id=$id'><i class='fas fa-trash text-danger'></i></a>
                             ";
                                             }

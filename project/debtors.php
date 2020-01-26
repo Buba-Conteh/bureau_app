@@ -60,8 +60,8 @@ $debtors = getDebtors($pdo);
                       <th>Phone</th>
                       <th>NIN</th>
                       <th>Address</th>
-                      <th>Paid</th>
                       <th>Amount</th>
+                      <th>Paid</th>
                       <th>Balance</th>
                       <th>date</th>
                       <!-- <th>Status</th> -->
@@ -76,8 +76,8 @@ $debtors = getDebtors($pdo);
                       <th>Phone</th>
                       <th>NIN</th>
                       <th>Addres</th>
-                      <th>Paid</th>
                       <th>Amount</th>
+                      <th>Paid</th>
                       <th>Balance</th>
                       <th>date</th>
                       <!-- <th>Status</th> -->
@@ -115,8 +115,8 @@ $debtors = getDebtors($pdo);
                       <td>$phone</td>
                       <td>$nationalId</td>
                       <td>$address</td>
-                      <td class='text-$stcl'>$paid</td>
                       <td>$amount</td>
+                      <td class='text-$stcl'>$paid</td>
                       <td>$balance</td>
                       <td>$time</td>
                      
@@ -173,7 +173,7 @@ $debtors = getDebtors($pdo);
 
 
 
-                <form method="get" name="add-customer">
+                <form method="get" name="add-customer" action="includes/addDebtor.php">
 
                   <div class="form-group row">
                     <div class="col-sm-6 mb-3 mb-sm-0">

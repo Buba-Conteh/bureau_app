@@ -168,35 +168,35 @@ $currencies = getCurrencies($pdo);
         return document.querySelector(elem);
     }
 
-    selector('#transType').addEventListener('input', e => {  
+    selector('#transType').addEventListener('input', e => {
 
         let data = <?= json_encode($currencies) ?>
 
         console.log(data);
         for (const key in data) {
-           
+
             if (data[key].code == selector('.custom-select').value) {
 
                 console.log(data[key].selling_rate, data[key].buying_rate)
-                if (selector('#transType').value == 'buy') {
+                if (selector('#transType').value == 'sell') {
                     selector('#base').value = data[key].selling_rate * (selector('#amount').value)
                 }
 
-                if (selector('#transType').value == 'sell') {
+                if (selector('#transType').value == 'buy') {
                     selector('#base').value = data[key].buying_rate * (selector('#amount').value)
                 }
             }
-            
+
 
         }
 
 
+        // // };
+        // if (selector('#transType').value == 'sell') {
+        //     console.log((selector('#option').dataset.sell));
+        //     selector('#base').value = (selector('#amount').value) / (selector('#option').dataset.buy);
+        //     return;
         // };
-        if (selector('#transType').value == 'sell') {
-            console.log((selector('#option').dataset.sell));
-            selector('#base').value = (selector('#amount').value) / (selector('#option').dataset.buy);
-            return;
-        };
 
     });
 </script>

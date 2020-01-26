@@ -94,7 +94,7 @@ function createDebtor($pdo)
       //   dd($executeCustomer);
       if ($executeCustomer) {
          $_SESSION['new_customer_created'] = "you have successfully added debtor";
-         return $executeCustomer;
+         // return $executeCustomer;
       } else {
          $_SESSION['verlidaiton'] = "Debtor Entry failed";
       }
@@ -296,14 +296,14 @@ function getCurrency($pdo, $code)
    // dd($currency);
    return $currency;
 }
-function updateCurrency($pdo, $code)
-{
+// function updateCurrency($pdo, $code)
+// {
 
-   $currency = $pdo->query("UPDATE currency SET `buyiny_rate`='$buyingRate', `selling_rate`='$sellingRate'");
+//    $currency = $pdo->query("UPDATE currency SET `buyiny_rate`='$buyingRate', `selling_rate`='$sellingRate'");
 
-   $currency = $currency->fetchAll(PDO::FETCH_ASSOC);
-   return $currency;
-}
+//    $currency = $currency->fetchAll(PDO::FETCH_ASSOC);
+//    return $currency;
+// }
 
 
 function getExpenses($pdo)

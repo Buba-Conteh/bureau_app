@@ -15,6 +15,21 @@ $totalDalasis = getDalasis($pdo) - expensesAmount($pdo);
 
 $id = ($_POST['id']);
 if ($type == "buy") {
+   
+  if ($totalDalasis < $baseCurrency) {
+    $_SESSION['massage'] = "Your Dalasis account is less than the amount";
+
+    return header('location: ../transaction.php');
+
+   
+  }
+  
+  $baseCurrency = $baseCurrency * -1;
+
+}
+
+
+if ($type == "sell") {
 
   foreach ($totalCurrencyAmounts as $key => $currencyAmounts) {
 
@@ -27,20 +42,8 @@ if ($type == "buy") {
       return;
     }
   }
-
+  
   $amount = $amount * -1;
-}
-
-
-if ($type == "sell") {
-
-  if ($totalDalasis < $baseCurrency) {
-    $_SESSION['massage'] = "Your Dalasis account is less than the amount";
-
-    return header('location: ../transaction.php');
-
-    $baseCurrency = $baseCurrency * -1;
-  }
 }
 
 if ($type == "capital" && $currency == "GMD") {
